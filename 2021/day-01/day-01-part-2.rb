@@ -5,6 +5,6 @@ input     = File.read(file_path)
 
 depths = input.split("\n").map(&:to_i)
 
-puts depths.each_cons(4).count do |a, b, c, d|
-  (b + c + d) > (a + b + c)
+puts depths.each_cons(4).count do |a, _, _, d|
+  d > a
 end
